@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore Warnes - Inicio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-mobile-alt"></i> TechStore Warnes
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons" id="authButtons">
+    <a href="login.html" class="btn-login">
+        <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+    </a>
+    <a href="registro.html" class="btn-register">
+        <i class="fas fa-user-plus"></i> Registrarse
+    </a>
+</div>
+<div class="user-info" id="userInfo" style="display: none;">
+    <div class="user-avatar">
+        <i class="fas fa-user"></i>
+    </div>
+    <span class="user-name" id="userName"></span>
+    <button class="btn-logout" onclick="logout()">
+        <i class="fas fa-sign-out-alt"></i>
+    </button>
+</div>
+<button class="mobile-menu-toggle" id="mobileMenuToggle">
+    <i class="fas fa-bars"></i>
+</button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Bienvenido a TechStore Warnes</h1>
+                <p class="hero-subtitle">La mejor tecnología móvil al alcance de tu mano</p>
+                <p class="hero-description">
+                    Descubre nuestra amplia selección de celulares de las mejores marcas. 
+                    Calidad garantizada, precios competitivos y atención personalizada en Warnes, Pentaguazú.
+                </p>
+                <div class="hero-buttons">
+                    <a href="productos.html" class="btn-primary">
+                        <i class="fas fa-shopping-bag"></i> Ver Productos
+                    </a>
+                    <a href="contacto.html" class="btn-secondary">
+                        <i class="fas fa-phone"></i> Contactar
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card">
+                    <i class="fas fa-mobile-screen-button"></i>
+                </div>
+            </div>
+        </div>
+        <div class="hero-waves">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0 C150,100 350,0 600,50 C850,100 1050,0 1200,50 L1200,120 L0,120 Z" fill="#ffffff"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">¿Por qué elegirnos?</h2>
+                <p class="section-subtitle">Las razones por las que somos tu mejor opción</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3>Productos Garantizados</h3>
+                    <p>Todos nuestros celulares cuentan con garantía oficial. Tu inversión está protegida.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h3>Entrega Rápida</h3>
+                    <p>Envíos a domicilio en Warnes y zonas aledañas. Recibe tu pedido en tiempo récord.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Atención Personalizada</h3>
+                    <p>Nuestro equipo te asesora para que encuentres el celular perfecto para ti.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>Mejores Precios</h3>
+                    <p>Precios competitivos y promociones especiales. Calidad sin comprometer tu bolsillo.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Variedad de Marcas</h3>
+                    <p>Samsung, Apple, Xiaomi, Huawei y más. Las mejores marcas del mercado.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Facilidades de Pago</h3>
+                    <p>Múltiples métodos de pago disponibles. Compra de la forma que prefieras.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Marcas Destacadas</h2>
+                <p class="section-subtitle">Trabajamos con las mejores marcas del mercado</p>
+            </div>
+            <div class="brands-grid">
+                <div class="brand-card">
+                    <i class="fab fa-apple"></i>
+                    <span>Apple</span>
+                </div>
+                <div class="brand-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Samsung</span>
+                </div>
+                <div class="brand-card">
+                    <i class="fas fa-mobile-screen"></i>
+                    <span>Xiaomi</span>
+                </div>
+                <div class="brand-card">
+                    <i class="fas fa-mobile"></i>
+                    <span>Huawei</span>
+                </div>
+                <div class="brand-card">
+                    <i class="fas fa-mobile-button"></i>
+                    <span>Motorola</span>
+                </div>
+                <div class="brand-card">
+                    <i class="fas fa-mobile-screen-button"></i>
+                    <span>OPPO</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Listo para encontrar tu próximo celular?</h2>
+                <p>Explora nuestro catálogo completo y encuentra el dispositivo perfecto para ti</p>
+                <a href="productos.html" class="btn-cta">
+                    <i class="fas fa-arrow-right"></i> Explorar Productos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+<section id="nosotros" class="about-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Sobre Nuestro Proyecto</h2>
+            <p class="section-subtitle">Conoce más sobre TechStore Warnes</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Este sistema web fue desarrollado como parte del proyecto de grado del Bachillerato Técnico Humanístico <strong>"Núcleo Educativo Las Gamas"</strong> en la especialidad de Sistemas Informáticos.</p>
+                <p>Nuestro objetivo es modernizar el comercio de celulares en Warnes, especialmente en Pentaguazú , ofreciendo una plataforma digital que beneficie tanto a compradores como vendedores locales.</p>
+                <p>TechStore Warnes nace con la visión de facilitar el acceso a tecnología móvil de calidad, brindando un servicio confiable, transparente y cercano a nuestra comunidad.</p>
+                <p>Creado por <strong>Miguel Angel Maraza Avila</strong> bajo la supervisión del <strong>Lic. Boris Roger Vaca Carrillo</strong>, este proyecto representa una solución tecnológica práctica que busca impulsar el desarrollo digital en nuestra región.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contacto" class="contact-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Contáctanos</h2>
+            <p class="section-subtitle">Estamos aquí para ayudarte</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info-card">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Ubicación</h3>
+                <p>Pentaguazú, Warnes<br>Santa Cruz - Bolivia</p>
+            </div>
+            <div class="contact-info-card">
+                <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <h3>Teléfono</h3>
+                <p>+591 73871178</p>
+                <a href="tel:+59173871178" class="btn-contact">Llamar Ahora</a>
+            </div>
+            <div class="contact-info-card">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Email</h3>
+                <p>info@techstorewarnes.com</p>
+                <a href="mailto:info@techstorewarnes.com" class="btn-contact">Enviar Email</a>
+            </div>
+            <div class="contact-info-card">
+                <div class="contact-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3>WhatsApp</h3>
+                <p>Escríbenos directamente</p>
+                <a href="https://wa.me/59173871178" target="_blank" class="btn-contact">Abrir WhatsApp</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-mobile-alt"></i> TechStore Warnes</h3>
+                    <p>Tu tienda digital de confianza para celulares en Warnes, Pentaguazú .</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Pentaguazú, Warnes, Santa Cruz</li>
+                        <li><i class="fas fa-phone"></i> +591 73871178</li>
+                        <li><i class="fas fa-envelope"></i> info@techstorewarnes.com</li>
+                        <li><i class="fas fa-clock"></i> Lun - Sáb: 8:00 AM - 8:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechStore Warnes. Todos los derechos reservados.</p>
+                <p class="project-info">Proyecto desarrollado por Miguel Angel Maraza Avila - BTH Sistemas Informáticos</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

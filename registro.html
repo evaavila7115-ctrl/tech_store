@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse - TechStore Warnes</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="registro.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-left">
+            <div class="auth-brand">
+                <i class="fas fa-mobile-alt"></i>
+                <h1>TechStore Warnes</h1>
+                <p>Únete a nuestra comunidad</p>
+            </div>
+            <div class="auth-illustration">
+                <i class="fas fa-user-plus"></i>
+            </div>
+        </div>
+        
+        <div class="auth-right">
+            <div class="auth-form-container">
+                <a href="index.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Volver al inicio
+                </a>
+                
+                <div class="auth-header">
+                    <h2>Crear Cuenta</h2>
+                    <p>Completa tus datos para registrarte</p>
+                </div>
+                
+                <form id="registerForm" class="auth-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">
+                                <i class="fas fa-user"></i> Nombre *
+                            </label>
+                            <input type="text" id="nombre" name="nombre" required 
+                                   placeholder="Tu nombre">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="apellido">
+                                <i class="fas fa-user"></i> Apellido
+                            </label>
+                            <input type="text" id="apellido" name="apellido" 
+                                   placeholder="Tu apellido">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">
+                            <i class="fas fa-envelope"></i> Correo Electrónico *
+                        </label>
+                        <input type="email" id="email" name="email" required 
+                               placeholder="tu@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefono">
+                            <i class="fas fa-phone"></i> Teléfono
+                        </label>
+                        <input type="tel" id="telefono" name="telefono" 
+                               placeholder="70123456">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">
+                            <i class="fas fa-lock"></i> Contraseña *
+                        </label>
+                        <div class="password-input">
+                            <input type="password" id="password" name="password" required 
+                                   placeholder="••••••••" minlength="6">
+                            <button type="button" class="toggle-password" onclick="togglePassword('password')">
+                                <i class="fas fa-eye" id="toggleIcon1"></i>
+                            </button>
+                        </div>
+                        <small class="input-hint">Mínimo 6 caracteres</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirmPassword">
+                            <i class="fas fa-lock"></i> Confirmar Contraseña *
+                        </label>
+                        <div class="password-input">
+                            <input type="password" id="confirmPassword" name="confirmPassword" required 
+                                   placeholder="••••••••" minlength="6">
+                            <button type="button" class="toggle-password" onclick="togglePassword('confirmPassword')">
+                                <i class="fas fa-eye" id="toggleIcon2"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="direccion">
+                            <i class="fas fa-map-marker-alt"></i> Dirección
+                        </label>
+                        <textarea id="direccion" name="direccion" rows="2" 
+                                  placeholder="Tu dirección completa (opcional)"></textarea>
+                    </div>
+                    
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="terms" required>
+                            <span>Acepto los <a href="#">términos y condiciones</a></span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-user-plus"></i> Registrarme
+                    </button>
+                    
+                    <div class="auth-footer">
+                        <p>¿Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+                    </div>
+                </form>
+                
+                <div id="message" class="message"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="spinner"></div>
+        <p>Creando tu cuenta...</p>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const supabaseUrl = 'https://haubuayypogpafvyinne.supabase.co'
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhhdWJ1YXl5cG9ncGFmdnlpbm5lIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTU4NzU1MjEsImV4cCI6MjA3MTQ1MTUyMX0.vNVCJE79T7ukHWVT54dzRHTSGuSya8bY-2yjZTm9ur0'
+        const supabase = window.supabase.createClient(supabaseUrl, supabaseKey)
+    </script>
+    <script src="registro.js"></script>
+</body>
+</html>
